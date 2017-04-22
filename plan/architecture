@@ -1,0 +1,32 @@
+# root
+name
+description
+type
+sub:
+	solution*
+	bug*
+
+# problem
+(name)
+description
+type
+sub:
+	solution*
+
+# solution
+(name)
+description
+niceness
+type
+sub:
+	problem*
+	solution*
+
+# bug
+(name)
+description
+logs
+conclusions
+type
+sub:
+	problem | solution
