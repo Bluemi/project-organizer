@@ -7,14 +7,15 @@ sub:
 	bug*
 
 # problem
-(name)
+name
 description
 type
 sub:
 	solution*
+	bug*
 
 # solution
-(name)
+name
 description
 niceness
 type
@@ -23,10 +24,9 @@ sub:
 	solution*
 
 # bug
-(name)
+name
 description
 logs
 conclusions
 type
-sub:
-	problem | solution
+(fix)
