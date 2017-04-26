@@ -1,59 +1,49 @@
+# plan
+
 /		Contains c,t,p,i,b-folders which contain all concepts/tasks/problems/implementations/bugs. Every Task with name <name> is stored as the file /t/<name> and so on...
 /root: 		The project will be defined here. In addition to the Task-Template it containes "Ideas" and a "Begin Date"
 
-Description:
-	Task:
-		A "task" describes what has to be done, NOT how to do it.
+Task:
+	A "task" describes what has to be done, NOT how to do it.
 
-	Concept:
-		A "concept" describes how to do something, NOT what to do.
+	Description:		First sentence is TL;DR. Should contain a list of features
+	Approximate Duration:	in work hours
+	Priority:		0.0 bis 1.0
+	Done:			Yes/No
+	Concepts:		List<Concept>, concepts which attempt to solve the Task
 
-	Bug:
-		A run-time error, which has to be debugged in order to detect the Problem or Implementation-error which caused this.
+Concept:
+	A "concept" describes how to do something, NOT what to do.
 
-	Problem:
-		A concept problem, which may be caused by clashing concepts or just one failing concept itself.
+	Description:		First sentence is TL;DR
+	Rating:
+		Prediction:	as Text written before implementation, 
+		Review:		as Text written after implementation
+	Implementations/Tasks:	List<Implementation/Task>, subtasks and if the answer to the task is trivial an implementation
 
+Bug:
+	A run-time error, which has to be debugged in order to detect the Problem or Implementation-error which caused this.
 
-Templates:
-	Task:
-		(Name):			The name of the Task
-		Description:		First sentence is TL;DR. Should contain a list of features
-		Approximate Duration:	in work hours
-		Priority:		0.0 bis 1.0
-		Done:			Yes/No
-		Concepts:		List<Concept>, concepts which attempt to solve the Task
+	Description:		First sentence is TL;DR
+	Inclusion:		Criterion for Inclusion
+	Exclusion:		Criterion for Exclusion
+	CausedBy:		Problem/Implementation, the reason for this bug.
+	Logs:			List<Log>, list of documented Test-Logs.
+				Logs contain:
+					- test-setup (commit hashes)
+					- test-result
 
-	Concept:
-		(Name):			The name of the Concept
-		Description:		First sentence is TL;DR
-		Rating:
-			Prediction:	as Text written before implementation, 
-			Review:		as Text written after implementation
-		Implementations/Tasks:	List<Implementation/Task>, subtasks and if the answer to the task is trivial an implementation
-		Problems:		List<Problem>, list of produced problems
+Problem:
+	A concept problem, which may be caused by clashing concepts or just one failing concept itself.
 
-	Problem:
-		(Name):			The name of the Problem
-		Description:		first sentence is TL;DR
-		Bugs:			List<Bug>, list of produced Bugs
-		CausedBy:		List<Concept>, list of Concepts which clash and therefore cause this problem.
+	Description:		first sentence is TL;DR
+	CausedBy:		List<Concept>, list of Concepts which clash and therefore cause this problem.
 
-	Implementation:
-		(Name):			The name of the Implementation
-		Header/Class-Diagram:	A way to represent the implementation
-		Bugs:			List<Bug>, list of produces Bugs directly caused by this implementation
+Implementation:
+	Close to "concept", but without any subtasks, and therefore very detailed, with snippets from header-files.
 
-	Bug:
-		(Name):			The name of the Bug
-		Description:		First sentence is TL;DR
-		Inclusion:		Criterion for Inclusion
-		Exclusion:		Criterion for Exclusion
-		CausedBy:		Problem/Implementation, the reason for this bug.
-		Logs:			List<Log>, list of documented Test-Logs.
-					Logs contain:
-						- test-setup (commit hashes)
-						- test-result
+	Header/Class-Diagram:	A way to represent the implementation
+
 
 # TODO excludes: "Some concepts/implementations explicitly exclude some things -- as a generic parameter in class C, prevents using a List<C>"
 # TODO tags
