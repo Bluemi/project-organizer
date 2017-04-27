@@ -5,11 +5,26 @@ These classes are generally referred to with their lowercase inital letter (t, c
 Objects are instances of these classes, which are stored in files.
 
 In every object, you can put so-called here-objects, which allow you to create an object just by using a name and a (short) description.
-When declaring a here-object, the object-name is fully defined in the complete document.
-The syntax is [<class-letter>/<name>; <description>].
+The syntax is `[<class-letter>/<name>; <description>]`.
 
 For example:
-[t/Screen; Provides functions for rendering to the screen]
+`[t/Screen; Provides functions for rendering to the screen]`
+
+or multiline:
+[t/Screen;
+	Concepts: "c/SomeConcept"
+
+	# Description
+	Provides functions for rendering to the screen
+]
+
+When declaring a here-object, the object-name is fully defined in the complete document.
+When needing to refer to a here-object from another document, it's necesarry to first name the parent-object:
+`<parent-class-letter>/<parent-name>/<class-letter>/<name>`
+
+For example:
+`c/Screen/t/Screen` if the task t/Screen is defined in c/Screen.
+
 
 /		Contains c,t,p,i,b-folders which contain all objects (of the particular class). Every Task with name <name> is stored as the file /t/<name> and so on...
 /root: 		The project will be defined here. In addition to the Task-Sample (see samples/t) it containes "Ideas" and a "Begin Date"
