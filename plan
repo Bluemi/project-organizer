@@ -1,35 +1,27 @@
 # plan
 
-Classes are Task, Concept, Bug, Problem and Implementation.
-These classes are generally referred to with their lowercase inital letter (t, c, b, p, i).
+Classes are Concept, Bug, Problem and Implementation.
+These classes are generally referred to with their lowercase inital letter (c, b, p, i).
 Objects are instances of these classes, which are stored in files.
 
 In every object, you can put so-called here-objects, which allow you to create an object just by using a name and a (short) description.
 The syntax is [<class-letter>/<name>: <description>].
 
 For example:
-[t/Screen: Provides functions for rendering to the screen]
+[c/Screen: Provides functions for rendering to the screen]
 
-/		Contains c,t,p,i,b-folders which contain all objects (of the particular class). Every Task with name <name> is stored as the file /t/<name> and so on...
-/root: 		The project will be defined here. In addition to the Task-Sample (see samples/t) it containes "Ideas" and a "Begin Date"
-
-Task:
-	A "task" describes what has to be done, NOT how to do it.
-
-	Description:		First sentence is TL;DR. Should contain a list of features
-	Approximate Duration:	in work hours
-	Priority:		0.0 bis 1.0
-	Done:			Yes/No
-	Concepts:		List<Concept>, concepts which attempt to solve the Task
+/		Contains c,p,i,b-folders which contain all objects (of the particular class). Every Concept with name <name> is stored as the file /c/<name> and so on...
+/root: 		The project will be defined here. It's sample is in samples/r.
 
 Concept:
-	A "concept" describes how to do something, NOT what to do.
+	A "concept" describes what to do, and how to do it.
 
-	Description:		First sentence is TL;DR
+	Approximate Duration:	in work hours
+	Description:		First sentence is TL;DR. Describes subtasks for this concept.
+	sub.<x>:		A list of all concepts/implementations for a specific subtask <x>. Choose impl if the answer is trivial.
 	Rating:
 		Prediction:	as Text written before implementation, 
 		Review:		as Text written after implementation
-	Implementations/Tasks:	List<Implementation/Task>, subtasks and if the answer to the task is trivial an implementation
 
 Bug:
 	A run-time error, which has to be debugged in order to detect the Problem or Implementation-error which caused this.
