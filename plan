@@ -18,7 +18,7 @@ Concept:
 
 	Approximate Duration:	in work hours
 	Description:		First sentence is TL;DR. Describes subtasks for this concept.
-	sub.<x>:		A list of all concepts/implementations for a specific subtask <x>. Choose impl if the answer is trivial.
+	Sub.<x>:		A list of all concepts/implementations for a specific subtask <x>. Choose impl if the answer is trivial.
 	Rating:
 		Prediction:	as Text written before implementation, 
 		Review:		as Text written after implementation
