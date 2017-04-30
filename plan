@@ -1,7 +1,7 @@
 # plan
 
-Classes are Concept, Bug, Problem and Implementation.
-These classes are generally referred to with their lowercase inital letter (c, b, p, i).
+Classes are Concept, Bug and Problem.
+These classes are generally referred to with their lowercase inital letter (c, b, p).
 Objects are instances of these classes, which are stored in files.
 
 In every object, you can put so-called here-objects, which allow you to create an object just by using a name and a (short) description.
@@ -10,7 +10,7 @@ The syntax is [<class-letter>/<name>: <description>].
 For example:
 [c/Screen: Provides functions for rendering to the screen]
 
-/		Contains c,p,i,b-folders which contain all objects (of the particular class). Every Concept with name <name> is stored as the file /c/<name> and so on...
+/		Contains c,p,b-folders which contain all objects (of the particular class). Every Concept with name <name> is stored as the file /c/<name> and so on...
 /root: 		The project will be defined here. It's sample is in samples/r.
 
 Concept:
@@ -18,7 +18,8 @@ Concept:
 
 	Approximate Duration:	in work hours
 	Description:		First sentence is TL;DR. Describes subtasks for this concept.
-	Sub.<x>:		A list of all concepts/implementations for a specific subtask <x>. Choose impl if the answer is trivial.
+	Sub.<x>:		A list of all concepts for a specific subtask <x>.
+	DependsOn:		List of concepts which are necessary for this concept. The stuff defined in the dependencies are usable from here.
 	Rating:
 		Prediction:	as Text written before implementation, 
 		Review:		as Text written after implementation
@@ -29,7 +30,7 @@ Bug:
 	Description:		First sentence is TL;DR
 	Inclusion:		Criterion for Inclusion
 	Exclusion:		Criterion for Exclusion
-	CausedBy:		Problem/Implementation, the reason for this bug.
+	CausedBy:		Problem/Concept, the reason for this bug.
 	Logs:			List<Log>, list of documented Test-Logs.
 				Logs contain:
 					- test-setup (commit hashes)
@@ -41,10 +42,5 @@ Problem:
 	Description:		first sentence is TL;DR
 	CausedBy:		List<Concept>, list of Concepts which clash and therefore cause this problem.
 
-Implementation:
-	Close to "concept", but without any subtasks, and therefore very detailed, with snippets from header-files.
-
-	Header/Class-Diagram:	A way to represent the implementation
-
-# TODO excludes: "Some concepts/implementations explicitly exclude some things -- as a generic parameter in class C, prevents using a List<C>"
+# TODO excludes: "Some concepts explicitly exclude some things -- as a generic parameter in class C, prevents using a List<C>"
 # TODO tags
