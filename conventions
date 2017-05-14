@@ -1,0 +1,11 @@
+# conventions
+
+When defining a subconcept C for a parentconcept D, where C is a specialization for D:
+	you write `Sub: "c/C"` into the c/D file.
+
+In C++:
+	When a concept declares a class: it is denoted as `class X;` or `class X { ... };`
+	When a concept adds new things to a class X, it is denoted as `X { ... };`.
+
+	This also works with inheritance:
+	X : D; # The X-class (which is defined anywhere recursively in the DependsOn section), is now a subclass of D
