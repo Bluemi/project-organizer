@@ -1,7 +1,17 @@
 # conventions
 
+Every Subtask has to be explained in the Description section, with the following syntax:
+.<Taskname>:
+	<Explanation>
+
 When defining a subconcept C for a parentconcept D, where C is a specialization for D:
 	you write `Sub: "c/C"` into the c/D file.
+
+When defining a subtask which does not need to be solved:
+	you write Sub?Task: "c/C"
+	In the explanantin of this optional Subtask you write:
+	?Task:
+		<Explanation>
 
 In C++:
 	When a concept declares a class: it is denoted as `class X;` or `class X { ... };`
