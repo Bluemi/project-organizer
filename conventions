@@ -4,6 +4,9 @@ Every Subtask has to be explained in the Description section, with the following
 .<Taskname>:
 	<Explanation>
 
+Every subtask needs exactly one solution.
+Every optional subtask needs exactly one/no solution.
+
 When defining a subconcept C for a parentconcept D, where C is a specialization for D:
 	you write `Sub: "c/C"` into the c/D file.
 
